@@ -1,13 +1,10 @@
 package com.mainstream.userManagement.Controller;
 
-import com.mainstream.userManagement.Exception.ResourceNotFoundException;
 import com.mainstream.userManagement.Model.User;
 import com.mainstream.userManagement.Service.UserService;
-import lombok.NonNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -32,7 +29,7 @@ public class UserController {
 
     //Retrieve user by id endpoint
     @GetMapping("/{id}")
-    public User getUser(@PathVariable long id) throws ResourceNotFoundException {
+    public User getUser(@PathVariable long id){
         return userService.retrieveUserById(id);
     }
 
