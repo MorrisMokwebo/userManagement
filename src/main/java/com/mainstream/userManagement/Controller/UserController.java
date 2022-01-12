@@ -12,6 +12,7 @@ import java.util.List;
 
 /**
  * User controller contains all the user endpoints
+ * api documentation http://localhost:8080/swagger-ui.html#
  */
 @RestController
 @RequestMapping("/api/v1/users")
